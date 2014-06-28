@@ -1,4 +1,4 @@
-generated at: 2014-06-28 12:47:57
+generated at: 2014-06-28 12:50:22
 
 ## Get event list
 
@@ -29,9 +29,9 @@ POST /
 
 ```json
 {
-   "jsonrpc" : "2.0",
-   "result" : "{\"event_list\":[\"{\\\"event\\\":{\\\"event_name\\\":\\\"Awesome Event\\\",\\\"end_epoch_time\\\":1403418600,\\\"event_id\\\":\\\"awesome_event\\\",\\\"start_epoch_time\\\":1403402400,\\\"catalog_fields\\\":\\\"circle_name\\\\tpen_name\\\\thomepage_url\\\"}}\"]}",
-   "id" : 1
+   "result" : "{\"event_list\":[\"{\\\"event\\\":{\\\"catalog_fields\\\":\\\"circle_name\\\\tpen_name\\\\thomepage_url\\\",\\\"event_name\\\":\\\"Awesome Event\\\",\\\"start_epoch_time\\\":1403402400,\\\"event_id\\\":\\\"awesome_event\\\",\\\"end_epoch_time\\\":1403418600}}\"]}",
+   "id" : 1,
+   "jsonrpc" : "2.0"
 }
 
 ```
@@ -67,9 +67,9 @@ POST /
 
 ```json
 {
-   "id" : 1,
-   "result" : "{\"event\":{\"start_epoch_time\":1403402400,\"event_id\":\"awesome_event\",\"end_epoch_time\":1403418600,\"event_name\":\"Awesome Event\",\"catalog_fields\":\"circle_name\\tpen_name\\thomepage_url\"}}",
-   "jsonrpc" : "2.0"
+   "result" : "{\"event\":{\"start_epoch_time\":1403402400,\"end_epoch_time\":1403418600,\"event_id\":\"awesome_event\",\"catalog_fields\":\"circle_name\\tpen_name\\thomepage_url\",\"event_name\":\"Awesome Event\"}}",
+   "jsonrpc" : "2.0",
+   "id" : 1
 }
 
 ```

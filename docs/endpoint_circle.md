@@ -1,4 +1,4 @@
-generated at: 2014-06-28 12:34:48
+generated at: 2014-06-28 12:50:22
 
 ## Get circle
 
@@ -31,9 +31,9 @@ POST /
 
 ```json
 {
-   "result" : "{\"circle\":{\"pen_name\":\"ichigotake\",\"event_id\":\"awesome_event\",\"name\":\"CircleBinder\",\"url_list\":[\"http://circlebinder.blog.jp\"],\"circle_id\":1}}",
-   "jsonrpc" : "2.0",
-   "id" : 1
+   "id" : 1,
+   "result" : "{\"circle\":{\"name\":\"CircleBinder\",\"url_list\":[\"http://circlebinder.blog.jp\"],\"circle_id\":1,\"event_id\":\"awesome_event\",\"pen_name\":\"ichigotake\"}}",
+   "jsonrpc" : "2.0"
 }
 
 ```
@@ -70,8 +70,8 @@ POST /
 ```json
 {
    "jsonrpc" : "2.0",
-   "result" : "{\"circles\":[{\"pen_name\":\"ichigotake\",\"url_list\":[\"http://circlebinder.blog.jp\"],\"name\":\"CircleBinder\",\"circle_id\":1,\"event_id\":\"awesome_event\"}]}",
-   "id" : 1
+   "id" : 1,
+   "result" : "{\"circles\":[{\"url_list\":[\"http://circlebinder.blog.jp\"],\"name\":\"CircleBinder\",\"circle_id\":1,\"pen_name\":\"ichigotake\",\"event_id\":\"awesome_event\"}]}"
 }
 
 ```

@@ -1,4 +1,4 @@
-generated at: 2014-06-28 12:34:47
+generated at: 2014-06-28 12:50:21
 
 ## Create checklist
 
@@ -33,9 +33,9 @@ POST /
 
 ```json
 {
-   "jsonrpc" : "2.0",
-   "result" : "{\"circles\":[{\"url_list\":[\"http://circlebinder.blog.jp\"],\"event_id\":\"awesome_event\",\"name\":\"CircleBinder\",\"pen_name\":\"ichigotake\",\"circle_id\":1}]}",
-   "id" : 1
+   "id" : 1,
+   "result" : "{\"circles\":[{\"circle_id\":1,\"name\":\"CircleBinder\",\"pen_name\":\"ichigotake\",\"url_list\":[\"http://circlebinder.blog.jp\"],\"event_id\":\"awesome_event\"}]}",
+   "jsonrpc" : "2.0"
 }
 
 ```
@@ -112,9 +112,9 @@ POST /
 
 ```json
 {
-   "id" : 1,
    "jsonrpc" : "2.0",
-   "result" : "{\"circles\":[{\"pen_name\":\"ichigotake\",\"circle_id\":1,\"event_id\":\"awesome_event\",\"name\":\"CircleBinder\",\"url_list\":[\"http://circlebinder.blog.jp\"]}]}"
+   "result" : "{\"circles\":[{\"circle_id\":1,\"name\":\"CircleBinder\",\"url_list\":[\"http://circlebinder.blog.jp\"],\"pen_name\":\"ichigotake\",\"event_id\":\"awesome_event\"}]}",
+   "id" : 1
 }
 
 ```
@@ -152,9 +152,9 @@ POST /
 
 ```json
 {
-   "jsonrpc" : "2.0",
-   "result" : "{\"circles\":[{\"circle_id\":1,\"pen_name\":\"ichigotake\",\"url_list\":[\"http://circlebinder.blog.jp\"],\"event_id\":\"awesome_event\",\"name\":\"CircleBinder\"}]}",
-   "id" : 1
+   "id" : 1,
+   "result" : "{\"circles\":[{\"circle_id\":1,\"name\":\"CircleBinder\",\"pen_name\":\"ichigotake\",\"url_list\":[\"http://circlebinder.blog.jp\"],\"event_id\":\"awesome_event\"}]}",
+   "jsonrpc" : "2.0"
 }
 
 ```
@@ -190,9 +190,9 @@ POST /
 
 ```json
 {
-   "result" : "{}",
    "jsonrpc" : "2.0",
-   "id" : 1
+   "id" : 1,
+   "result" : "{}"
 }
 
 ```
