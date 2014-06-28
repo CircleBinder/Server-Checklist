@@ -1,0 +1,6 @@
+/local
+CircleBinder-*/
+/CircleBinder-*
+/.build
+/_buid_params
+!META.json
