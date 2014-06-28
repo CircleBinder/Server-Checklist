@@ -11,6 +11,7 @@ CREATE TABLE circles (
 CREATE TABLE checklists (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     event_id VARCHAR(32) NOT NULL,
+    title VARCHAR(255) NOT NULL,
     PRIMARY KEY (id),
     INDEX event_id (event_id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;
@@ -18,8 +19,8 @@ CREATE TABLE checklists (
 CREATE TABLE checklist_circles (
     checklist_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     circle_id INT UNSIGNED NOT NULL,
-    title VARCHAR(255) NOT NULL,
-    PRIMARY KEY (checklist_id)
+    PRIMARY KEY (checklist_id),
+    UNIQUE (checklist_id, circle_id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE events (
