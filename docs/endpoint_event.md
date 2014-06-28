@@ -1,4 +1,4 @@
-generated at: 2014-06-28 12:34:48
+generated at: 2014-06-28 12:47:57
 
 ## Get event list
 
@@ -29,12 +29,9 @@ POST /
 
 ```json
 {
-   "error" : {
-      "message" : "Internal Error at /Users/ichigotake/Development/android/circlebinder/Server-Checklist/local/lib/perl5/JSON/RPC/Dispatch.pm line 180.\n",
-      "code" : -32603
-   },
-   "id" : 1,
-   "jsonrpc" : "2.0"
+   "jsonrpc" : "2.0",
+   "result" : "{\"event_list\":[\"{\\\"event\\\":{\\\"event_name\\\":\\\"Awesome Event\\\",\\\"end_epoch_time\\\":1403418600,\\\"event_id\\\":\\\"awesome_event\\\",\\\"start_epoch_time\\\":1403402400,\\\"catalog_fields\\\":\\\"circle_name\\\\tpen_name\\\\thomepage_url\\\"}}\"]}",
+   "id" : 1
 }
 
 ```
@@ -70,11 +67,8 @@ POST /
 
 ```json
 {
-   "error" : {
-      "message" : "Internal Error at /Users/ichigotake/Development/android/circlebinder/Server-Checklist/local/lib/perl5/JSON/RPC/Dispatch.pm line 180.\n",
-      "code" : -32603
-   },
    "id" : 1,
+   "result" : "{\"event\":{\"start_epoch_time\":1403402400,\"event_id\":\"awesome_event\",\"end_epoch_time\":1403418600,\"event_name\":\"Awesome Event\",\"catalog_fields\":\"circle_name\\tpen_name\\thomepage_url\"}}",
    "jsonrpc" : "2.0"
 }
 

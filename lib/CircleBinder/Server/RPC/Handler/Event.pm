@@ -3,6 +3,7 @@ package CircleBinder::Server::RPC::Handler::Event;
 use strict;
 use warnings;
 use JSON;
+use CircleBinder::Model::Event;
 
 sub new {
     my $class = shift;
@@ -10,17 +11,18 @@ sub new {
     return $self;
 }
 
-sub get_events {
+sub get_event_list {
     my $self = shift;
-    return JSON::to_json([
-        {
-            event_id          => "awesome_event",
-            event_name        => "Awesome Event",
-            start_epoch_time  => 1403402400,
-            end_epoch_time    => 1403418600,
-            catalog_fields    => "circle_name\tpen_name\thomepage_url",
-        },
-    ]);
+    return JSON::to_json({
+        event_list => [$self->get_event],
+    });
+}
+
+sub get_event {
+    my $self = shift;
+    return JSON::to_json({
+        event => CircleBinder::Model::Event::sample,
+    });
 }
 
 1;
