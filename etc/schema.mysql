@@ -3,7 +3,6 @@ CREATE TABLE circles (
     event_id VARCHAR(32) NOT NULL,
     name VARCHAR(511) NOT NULL,
     pen_name VARCHAR(511),
-    homepage_url TEXT,
     PRIMARY KEY(id),
     INDEX event_id(event_id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;

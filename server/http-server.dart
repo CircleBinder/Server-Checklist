@@ -20,7 +20,6 @@ main() {
             HttpResponse response = request.response;
             response.headers.set("Content-Type", "application/json; charset=UTF-8");
             response.statusCode = 200;
-            print(JSON.encode(result));
             if (result is Notification) {
               response.write("");
             } else {
