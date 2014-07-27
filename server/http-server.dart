@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:convert' show JSON;
 import 'package:http_server/http_server.dart' show HttpBodyHandler, HttpRequestBody;
 import 'package:jsonrpc2/jsonrpc_service.dart' show Notification, jsonRpcExec;
-import 'rpc-dispatcher.dart';
+import '../lib/src/rpc_dispatcher/rpc_dispatcher.dart';
 
 main() {
   HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 3000).then((HttpServer server) {
