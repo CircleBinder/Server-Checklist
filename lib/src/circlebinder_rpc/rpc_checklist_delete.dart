@@ -38,7 +38,7 @@ class ChecklistDeleteV1 implements RpcMethod {
 
   @override Map<String, RpcSchemaFragment> requestSchema()
       => new RpcSchemaBuilder()
-        .add("checklist_id", new RpcSchemaFragment(required: true, sampleValue: 42))
+        .add("checklist_id", RpcSchemaFragmentV1.checklistId())
         .schema;
 
   @override Future<String> run(Map requestParameters) {
