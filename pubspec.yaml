@@ -1,7 +1,5 @@
 name: Server-Checklist
 dependencies:
-  ddo: ">=0.2.3 <0.3.0"
-  sqljocky: ">=0.10.0 <0.11.0"
   exportable: ">=0.1.0 <0.2.0"
   jsonrpc2: ">=0.9.2 <0.10.0"
   http_server: ">=0.9.2+2 <0.10.0"

@@ -1,14 +1,14 @@
 part of circlebinder_rpc;
 
-class RpcChecklistDelete {
+class RpcChecklistGet {
 
-  static RpcChecklistDelete _instance = new RpcChecklistDelete._();
+  static final RpcChecklistGet _instance = new RpcChecklistGet._();
 
-  factory RpcChecklistDelete() {
+  factory RpcChecklistGet() {
     return _instance;
   }
 
-  RpcChecklistDelete._();
+  RpcChecklistGet._();
 
   Future<String> dispatch(Map requestParameters) {
     if (!requestParameters.containsKey('version')) {
@@ -18,7 +18,7 @@ class RpcChecklistDelete {
     RpcMethod method;
     switch (requestParameters['version']) {
       case 1:
-        method = new ChecklistDeleteV1();
+        method = new ChecklistGetV1();
         break;
       default:
         method = new InvalidResponseMethod();
@@ -26,7 +26,7 @@ class RpcChecklistDelete {
 
     SchemaValidator validator = new SchemaValidator(method.requestSchema(), requestParameters);
     if (!validator.isValid()) {
-      return new InvalidResponseMethod();
+      method = new InvalidResponseMethod();
     }
 
     return method.run(validator.getValidParameters());
@@ -34,16 +34,16 @@ class RpcChecklistDelete {
 
 }
 
-class ChecklistDeleteV1 implements RpcMethod {
+class ChecklistGetV1 implements RpcMethod {
 
   @override Map<String, RpcSchemaFragment> requestSchema()
       => new RpcSchemaBuilder()
-        .add("checklist_id", RpcSchemaFragmentV1.checklistId())
-        .schema;
+          .add('circle_id_list', RpcSchemaFragmentV1.circleIdList())
+          .schema;
 
   @override Future<String> run(Map requestParameters) {
     return new Future((){
-      return {"ChecklistDeleteV1": requestParameters};
+      return {"ChecklistGetV1": requestParameters};
     });
   }
 
