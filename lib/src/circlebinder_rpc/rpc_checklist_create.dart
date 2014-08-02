@@ -12,7 +12,7 @@ class RpcChecklistCreate {
 
   Future<String> dispatch(Map requestParameters) {
     if (!requestParameters.containsKey('version')) {
-      return new InvalidResponseMethod().run(requestParameters);
+      throw new InvalidResponseMethod().run(requestParameters);
     }
 
     RpcMethod method;
@@ -26,7 +26,7 @@ class RpcChecklistCreate {
 
     SchemaValidator validator = new SchemaValidator(method.requestSchema(), requestParameters);
     if (!validator.isValid()) {
-      return new InvalidResponseMethod();
+      throw new InvalidResponseMethod();
     }
 
     return method.run(validator.getValidParameters());

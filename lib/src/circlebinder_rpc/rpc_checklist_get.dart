@@ -36,7 +36,7 @@ class RpcChecklistGet {
 
 class ChecklistGetV1 implements RpcMethod {
 
-  @override Map<String, RpcSchemaFragment> requestSchema()
+  @override Map<String, Map<String, RpcSchemaFragment>> requestSchema()
       => new RpcSchemaBuilder()
           .add('circle_id_list', RpcSchemaFragmentV1.circleIdList())
           .schema;
