@@ -4,5 +4,11 @@ dependencies:
   exportable: ">=0.1.0 <0.2.0"
   jsonrpc2: ">=0.9.2 <0.10.0"
   http_server: ">=0.9.2+2 <0.10.0"
+  # For web
+  angular: ">=0.12.0 <0.13.0"
+  browser: any
+  shadow_dom: any
 dev_dependencies:
   unittest: ">=0.10.1+2 <0.11.0"
+transformers:
+  - angular

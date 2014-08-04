@@ -9,13 +9,14 @@ main() {
     RpcDispatcher dispatcher = new RpcDispatcher();
     server.transform(new HttpBodyHandler()).listen((HttpRequestBody requestBody) {
       HttpRequest request = requestBody.request;
-      setCrossOriginHeaders(request);
       switch (request.method) {
         case 'OPTIONS':
+          setCrossOriginHeaders(request);
           request.response.statusCode = 204;
           request.response.close();
           break;
         case 'POST':
+          setCrossOriginHeaders(request);
           jsonRpcExec(requestBody.body, dispatcher).then((result) {
             HttpResponse response = request.response;
             response.headers.set("Content-Type", "application/json; charset=UTF-8");
